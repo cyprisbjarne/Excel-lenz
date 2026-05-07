@@ -1,4 +1,4 @@
-# REACT installation
+# REPO
 
 Clone the project to your PC. 
 
@@ -20,3 +20,30 @@ Once you cloned the project to your PC, change the branch!! (**very important**)
 
 
 > -> Fetch the origin by pressing `fetch origin`
+
+
+# Node.js + npm installation
+
+## Install Node.js and npm
+
+1. Download the latest LTS version from the official website:  
+   https://nodejs.org
+
+2. Run the installer and follow the setup instructions.
+
+3. Verify the installation:
+
+```bash
+node -v
+npm -v
+```
+
+## Install a Package
+
+Example:
+
+```bash
+npm install express
+```
+
+
