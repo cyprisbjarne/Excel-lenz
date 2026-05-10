@@ -4,7 +4,7 @@ Clone the project to your PC.
 
 > -> Open Github Desktop
 > -> Press on `clone Project`
-> -> copy the URL from the repo `https://github.com/cyprisbjarne/Excel-lenz.git`
+> -> copy the URL from the repo `https://github.com/Excel-lenz/Excel-lenz.git`
 
 
 Once you cloned the project to your PC, change the branch!! (**very important**)
