@@ -1,24 +1,135 @@
-# REACT installation
 
-Clone the project to your PC. 
+# Getting Started
 
-> -> Open Github Desktop
-> -> Press on `clone Project`
-> -> copy the URL from the repo `https://github.com/cyprisbjarne/Excel-lenz.git`
+## Install Dependencies
+
+> Go into the `frontend/excellenz` folder (for example via cmdline `cd ./frontend/excellenz`)
+
+```bash
+npm install
+```
+
+## Start Development Server (Debug Mode)
+
+```bash
+npm run dev
+```
+
+The application will usually start at:
+
+```text
+http://localhost:5173
+```
+
+---
 
 
-Once you cloned the project to your PC, change the branch!! (**very important**)
+# Project Structure
 
-> -> press on `current branch`
+Example structure:
 
-![branchPic](https://media.discordapp.net/attachments/1484238442710958231/1501985968918630452/image.png?ex=69fe10f0&is=69fcbf70&hm=0ebfc4ff8ed05ea5bc3a3a56a19f71b86b23c73f5fc29ac0a0feb46db24111c1&=&format=webp&quality=lossless&width=1522&height=856)
+```text
+src/
+├── styles/
+├── components/
+├── pages/
+├── hooks/
+├── App.jsx
+└── main.jsx
+```
 
-> -> either create a new one or choose the `dev` branch (new one with your name or feature is better!!)
+## IMPORTANT
 
+> Before you start coding, read through the docs, what a component, a page and hooks are (we prob. dont need hooks tho). If you cannot find it in docs, ask chatgpt. 
+> If you create a new page, please setup a new stylesheet in `styles/`
+> Example
+```text
+src/
+├── styles/
+├ ├── main.css #for the main.jsx file
+├ ├── App.css #for the App.jsx file
+├── App.jsx
+└── main.jsx
+```  
 
-![branchPic](https://media.discordapp.net/attachments/1484238442710958231/1501986006436675695/image.png?ex=69fe10f9&is=69fcbf79&hm=061f6e38aee236641561b5fb9d32c34ab1f8005e4aacada4e5c5ed2684bba4e6&=&format=webp&quality=lossless&width=384&height=959)
+---
 
+# Basic React Component Example
 
-> -> Fetch the origin by pressing `fetch origin`
+```jsx
+function WelcomeMessage({ name }) {
+  return <h1>Hello {name}!</h1>;
+}
+
+export default WelcomeMessage;
+```
+
+Usage:
+
+```jsx
+<WelcomeMessage name="Developer" />
+```
+
+---
+
+# State Example
+
+```jsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  );
+}
+
+export default Counter;
+```
+
+---
+
+# Import Example
+
+```jsx
+import Header from "./components/Header";
+```
+
+---
+
+# Build for Production
+
+```bash
+npm run build
+```
+
+Preview production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+# Useful Commands
+
+```bash
+npm run dev       # Start development server
+npm run build     # Create production build
+npm run preview   # Preview production build
+```
+
+---
+
+# Documentation
+
+- React: https://react.dev
+- Vite: https://vitejs.dev
+- React Compiler: https://react.dev/learn/react-compiler
+- npm: https://docs.npmjs.com
+
 
 Readme changed
