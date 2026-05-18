@@ -1,15 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/sidebar.css";
-import { FaTachometerAlt, FaChartLine, FaWallet, FaCogs } from "react-icons/fa";
+import {
+  FaTachometerAlt,
+  FaChartLine,
+  FaWallet,
+  FaCogs,
+  FaBars,
+} from "react-icons/fa";
 
 export default function Sidebar() {
+  const [open, setOpen] = useState(true);
+
   return (
-    <div className="sidebar">
-      <h2 className="sidebar-logo">Excellenz</h2>
-      <div className="sidebar-item"><FaTachometerAlt /> Dashboard</div>
-      <div className="sidebar-item"><FaChartLine /> Umsatz</div>
-      <div className="sidebar-item"><FaWallet /> Finanzen</div>
-      <div className="sidebar-item"><FaCogs /> Einstellungen</div>
+    <div className={`sidebar ${open ? "open" : "collapsed"}`}>
+      {/* HEADER */}
+      <div className="sidebar-header">
+        <h2 className="sidebar-logo">{open ? "Excellenz" : "EX"}</h2>
+
+        <button className="toggle-btn" onClick={() => setOpen(!open)}>
+          <FaBars />
+        </button>
+      </div>
+
+      {/* ITEMS */}
+      <div className="sidebar-item">
+        <FaTachometerAlt />
+        {open && <span>Dashboard</span>}
+      </div>
+
+      <div className="sidebar-item">
+        <FaChartLine />
+        {open && <span>Umsatz</span>}
+      </div>
+
+      <div className="sidebar-item">
+        <FaWallet />
+        {open && <span>Finanzen</span>}
+      </div>
+
+      <div className="sidebar-item">
+        <FaCogs />
+        {open && <span>Einstellungen</span>}
+      </div>
     </div>
   );
 }
