@@ -1,27 +1,29 @@
 import React, {useState} from "react";
-import "../styles/umsatz.css";
+import "../styles/finanz.css";
 
 //noch nichts wie sidebar und so eingefügt,
-//dient bis jetzt einfach nur also vorlage für den Umsatz
-//Layout, UI, noch nichts konkretes, einfach nur die basic Umsatzechnung
-//alles hier ist auch auf der Finanzpage, hab es erstmal seperat zur übersicht
+//dient bis jetzt einfach nur als vorlage
+//Layout, UI, noch nichts konkretes, bis jetzt nur die basic Umsatzechnung
 
 
-export default function Umsatz() {
+export default function Finanz() {
 
+
+    //UMSATZ
     //Variablen sind bis jetzt nur als Beispiel mit vorgegebenen Wert
-
     const [verkauf, setVerkauf] = useState(150);
     const [preis, setPreis] = useState(12);
-
     const umsatz = verkauf * preis;
 
 
     return (
         <div className="vbox">
-            <h1 className="title">Umsatz</h1>
+            <h1 className="title">Finanz</h1>
+
+
 
             <section>
+                <h1>Umsatz</h1>
                 <h2 className="smalltitle">pro Monat: </h2>
                 <div className="hbox">
                     <div className="eingabe box">
@@ -34,8 +36,10 @@ export default function Umsatz() {
                 <div className="umsatz box">
                     Umsatz: {umsatz}€
                 </div>
+                <div className="platzhalter">füge hier Umsatzdiagramm ein</div>
             </section>
-            <div className="platzhalter">füge hier diagramm ein</div>
+
+
         </div>
 
     );

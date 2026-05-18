@@ -1,0 +1,61 @@
+.title {
+    color: #00ff88;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.smalltitle{
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+section{
+    border: 2px solid;
+    width: fit-content;
+    border-radius: 20px;
+    border-color : white;
+    background-color: #044225;
+    padding : 10px;
+}
+
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+.hbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom : 20px;
+
+}
+
+.platzhalter{
+    margin: 40px
+}
+
+.box{
+    border: 2px solid;
+    width: fit-content;
+    border-radius: 10px;
+    border-color : #9298A4;
+    background-color: #021B0F;
+}
+
+.eingabe{
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.umsatz{
+    padding: 10px;
+    font-size: 20px;
+}
+
+
